@@ -1,0 +1,28 @@
+{
+  "name": "webpack-guidebook",
+  "version": "1.0.0",
+  "description": "A technical mannual about Webpack knowledge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn run dumi dev --port=8030",
+    "start": "yarn run dev",
+    "lint:md": "lint-md *.md",
+    "lint:fix": "lint-md *.md --fix",
+    "build": "yarn run dumi build",
+    "deploy": "bash ./scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsejx/Webpack-Guidebook.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "tsejx",
+  "license": "MIT",
+  "homepage": "https://tsejx.github.io/webpack-guidebook/",
+  "devDependencies": {
+    "dumi": "^1.0.34",
+    "lint-md": "^0.1.1"
+  }
+}

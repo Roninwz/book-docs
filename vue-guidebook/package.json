@@ -1,0 +1,31 @@
+{
+  "name": "vue-guidebook",
+  "version": "1.0.0",
+  "description": "A technical mannual about Vue knowledge",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "dumi dev --port=8050",
+    "build": "dumi build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsejx/Vue-GuideBook.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-router",
+    "vuex",
+    "vite",
+    "guidebook"
+  ],
+  "author": "tsejx",
+  "license": "MIT",
+  "homepage": "https://tsejx.github.io/vue-guidebook/",
+  "devDependencies": {
+    "babel-plugin-import": "^1.13.3",
+    "dumi": "^1.1.25",
+    "lint-md": "^0.2.0",
+    "typescript": "^3.9.7"
+  }
+}
