@@ -2,7 +2,7 @@ module.exports = {
   // title: "Vue3源码解析 - vue中文社区",
   title: "web前端面试 - 面试官系列",
   description: "web前端面试,vue面试题,react面试题,js面试题,大厂面试题,阿里面试题,京东面试题",
-  base: '/interview/',
+  base: '/book-docs/web-interview/',
   head: [
     ["link", { rel: "icon", href: "/onepunch.jpeg" }],
     [
@@ -171,7 +171,7 @@ module.exports = {
       {
         title: "Webpack系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["webpack/webpack", "说说你对webpack的理解？解决了什么问题？"],
           ["webpack/build_process", "说说webpack的构建流程?"],
           ["webpack/Loader", "说说webpack中常见的Loader？解决了什么问题？"],
@@ -187,7 +187,7 @@ module.exports = {
       {
         title: "HTTP系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["http/HTTP_HTTPS", "什么是HTTP? HTTP 和 HTTPS 的区别?"],
           ["http/HTTPS", "为什么说HTTPS比HTTP安全? HTTPS是如何保证安全的？"],
           ["http/UDP_TCP", "如何理解UDP 和 TCP? 区别? 应用场景?"],
@@ -207,7 +207,7 @@ module.exports = {
       {
         title: "NodeJS系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["NodeJS/nodejs", "说说你对 Node.js 的理解？优缺点？应用场景？"],
           ["NodeJS/global", "说说 Node.js 有哪些全局对象？"],
           ["NodeJS/process", "说说对 Node 中的 process 的理解？有哪些常用方法？"],
@@ -227,7 +227,7 @@ module.exports = {
       {
         title: "React系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["React/React", "说说对React的理解？有哪些特性？"],
           ["React/Real DOM_Virtual DOM", "说说 Real DOM和 Virtual DOM 的区别？优缺点？"],
           ["React/life cycle", "说说 React 生命周期有哪些不同阶段？每个阶段对应的方法是？"],
@@ -266,7 +266,7 @@ module.exports = {
       {
         title: "版本控制系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["git/Version control", "说说你对版本管理的理解？常用的版本管理工具有哪些？"],
           ["git/Git", "说说你对Git的理解？"],
           ["git/fork_clone_branch", "说说Git中 fork, clone,branch这三个概念，有什么区别?"],
@@ -282,7 +282,7 @@ module.exports = {
       {
         title: "操作系统系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["linux/linux", "说说你对操作系统的理解？核心概念有哪些？"],
           ["linux/thread_process", "说说什么是进程？什么是线程？区别？"],
           ["linux/file", "说说 linux系统下 文件操作常用的命令有哪些？"],
@@ -295,7 +295,7 @@ module.exports = {
       {
         title: "typescript系统系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["typescript/typescript_javascript", "说说你对 typescript 的理解？与 javascript 的区别？"],
           ["typescript/data_type", "说说 typescript 的数据类型有哪些？"],
           ["typescript/enum", "说说你对 TypeScript 中枚举类型的理解？应用场景？"],
@@ -313,7 +313,7 @@ module.exports = {
       {
         title: "算法与数据结构系统系列  ( 已完结..)",
         collapsable: false,
-        children:[
+        children: [
           ["algorithm/Algorithm", "说说你对算法的理解？应用场景？"],
           ["algorithm/time_space", "说说你对算法中时间复杂度，空间复杂度的理解？如何计算？"],
           ["algorithm/structure", "说说你对数据结构的理解？有哪些？区别？"],
