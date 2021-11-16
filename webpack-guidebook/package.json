@@ -8,7 +8,7 @@
     "start": "yarn run dev",
     "lint:md": "lint-md *.md",
     "lint:fix": "lint-md *.md --fix",
-    "build": "yarn run dumi build",
+    "build": "yarn run dumi build  --outputPath ../docs/webpack-guidebook",
     "deploy": "bash ./scripts/deploy.sh"
   },
   "repository": {
