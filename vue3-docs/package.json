@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs --dest ../docs/vue3-docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  },
+  "dependencies": {
+    "vue-codemirror": "^4.0.6"
+  }
+}
