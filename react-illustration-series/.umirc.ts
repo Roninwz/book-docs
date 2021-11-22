@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 // More config: https://d.umijs.org/config.
-const ghPagePublicPath = '/react-illustration-series/';
+const ghPagePublicPath = '/book-docs/react-illustration-series/';
 export default defineConfig({
   title: '图解React',
   mode: 'site',
@@ -12,6 +12,7 @@ export default defineConfig({
   logo: `${ghPagePublicPath}logo.png`,
   base: ghPagePublicPath,
   publicPath: ghPagePublicPath,
+  outputPath: '../docs/react-illustration-series',
   menus: {
     '/main': [
       {
