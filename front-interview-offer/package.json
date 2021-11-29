@@ -1,0 +1,15 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vuepress dev docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs --dest ../docs/front-interview-offer"
+  },
+  "devDependencies": {
+    "vuepress": "1.8.0"
+  },
+  "dependencies": {}
+}
