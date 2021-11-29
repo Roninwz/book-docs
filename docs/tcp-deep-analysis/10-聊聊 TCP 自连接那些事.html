@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>技术文档</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="技术文档">
+    
+    <link rel="preload" href="/book-docs/tcp-deep-analysis/assets/css/0.styles.1ae38039.css" as="style"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/app.c5d1f0fa.js" as="script"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/2.8125d067.js" as="script"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/8.8683fe45.js" as="script"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/10.456c114f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/11.4f919a5c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/12.8691dd56.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/13.6eb06c9f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/14.8ea58ce4.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/15.99b76ce3.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/16.892ccdbb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/17.46486d87.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/18.1ae83189.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/19.6788fb0a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/20.38eb4e81.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/21.dd2d7e3c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/22.1fd8c44a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/23.7a6fd38e.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/24.4006c26f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/25.acd18f3e.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/26.d393a91d.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/27.5eb2dc92.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/28.2f7d9a61.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/29.1b6a2c80.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/3.086afb7c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/30.7b2345d3.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/31.eec26697.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/32.05263bfb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/33.0a453fe1.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/34.6fcf5c05.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/35.2076a0c2.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/36.db825ac9.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/37.3ce92f36.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/38.419ced31.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/39.e7e9657a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/4.1e02d683.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/40.11cc02bb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/41.e5c285f2.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/42.d1465cb7.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/43.bba7aad7.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/44.c74f481b.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/45.4c2a7d70.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/46.917e2cae.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/47.5ae9bff9.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/5.ed3e8199.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/6.19b45fc3.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/7.2a1330f4.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/9.b4387ffc.js">
+    <link rel="stylesheet" href="/book-docs/tcp-deep-analysis/assets/css/0.styles.1ae38039.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book-docs/tcp-deep-analysis/" class="home-link router-link-active"><!----> <span class="site-name">技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/book-docs/tcp-deep-analysis/1-开篇词 —— 小册食用指南.html" class="sidebar-link">1-开篇词 —— 小册食用指南.md</a></li><li><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html" class="active sidebar-link">10-聊聊 TCP 自连接那些事.md</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html#tcp-自连接是什么" class="sidebar-link">TCP 自连接是什么</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html#自连接原因分析" class="sidebar-link">自连接原因分析</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html#自连接的危害" class="sidebar-link">自连接的危害</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html#如何解决自连接问题" class="sidebar-link">如何解决自连接问题</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/book-docs/tcp-deep-analysis/11-相见时难别亦难 —— 谈谈四次挥手.html" class="sidebar-link">11-相见时难别亦难 —— 谈谈四次挥手.md</a></li><li><a href="/book-docs/tcp-deep-analysis/12-时光机 —— TCP 头部时间戳选项.html" class="sidebar-link">12-时光机 —— TCP 头部时间戳选项.md</a></li><li><a href="/book-docs/tcp-deep-analysis/13-状态机魔鬼 —— TCP 11 种状态变迁及模拟重现.html" class="sidebar-link">13-状态机魔鬼 —— TCP 11 种状态变迁及模拟重现.md</a></li><li><a href="/book-docs/tcp-deep-analysis/14-另辟蹊径看三次握手 —— 全连接队列和半连接队列与 backlog.html" class="sidebar-link">14-另辟蹊径看三次握手 —— 全连接队列和半连接队列与 backlog.md</a></li><li><a href="/book-docs/tcp-deep-analysis/15-原始但德高望重的 DDoS 攻击方式 —— SYN Flood 攻击原理.html" class="sidebar-link">15-原始但德高望重的 DDoS 攻击方式 —— SYN Flood 攻击原理.md</a></li><li><a href="/book-docs/tcp-deep-analysis/16-嫌三次握手太慢 —— 来快速打开吧.html" class="sidebar-link">16-嫌三次握手太慢 —— 来快速打开吧.md</a></li><li><a href="/book-docs/tcp-deep-analysis/17-Address already in use —— 聊聊 Socket 选项之 SO_REUSEADDR.html" class="sidebar-link">17-Address already in use —— 聊聊 Socket 选项之 SO_REUSEADDR.md</a></li><li><a href="/book-docs/tcp-deep-analysis/18-一台主机上两个进程可以同时监听同一个端口吗.html" class="sidebar-link">18-一台主机上两个进程可以同时监听同一个端口吗.md</a></li><li><a href="/book-docs/tcp-deep-analysis/19-优雅关闭连接 —— Socket 选项之 SO_LINGER.html" class="sidebar-link">19-优雅关闭连接 —— Socket 选项之 SO_LINGER.md</a></li><li><a href="/book-docs/tcp-deep-analysis/2-TCP_IP 历史与分层模型.html" class="sidebar-link">2-TCP_IP 历史与分层模型.md</a></li><li><a href="/book-docs/tcp-deep-analysis/20-一个神奇的状态 —— TIME_WAIT.html" class="sidebar-link">20-一个神奇的状态 —— TIME_WAIT.md</a></li><li><a href="/book-docs/tcp-deep-analysis/21-爱搞事情的 RST 包 —— 产生场景、Connection reset 与 Broken pipe.html" class="sidebar-link">21-爱搞事情的 RST 包 —— 产生场景、Connection reset 与 Broken pipe.md</a></li><li><a href="/book-docs/tcp-deep-analysis/22-重传机制 —— 超时重传、快速重传与 SACK.html" class="sidebar-link">22-重传机制 —— 超时重传、快速重传与 SACK.md</a></li><li><a href="/book-docs/tcp-deep-analysis/23-重传间隔有讲究 —— 多久重传才合适.html" class="sidebar-link">23-重传间隔有讲究 —— 多久重传才合适.md</a></li><li><a href="/book-docs/tcp-deep-analysis/24-TCP流量控制 —— 滑动窗口.html" class="sidebar-link">24-TCP流量控制 —— 滑动窗口.md</a></li><li><a href="/book-docs/tcp-deep-analysis/25-有风度的 TCP —— 拥塞控制.html" class="sidebar-link">25-有风度的 TCP —— 拥塞控制.md</a></li><li><a href="/book-docs/tcp-deep-analysis/26-TCP 发包的 hold 住哥 —— Nagle 算法那些事.html" class="sidebar-link">26-TCP 发包的 hold 住哥 —— Nagle 算法那些事.md</a></li><li><a href="/book-docs/tcp-deep-analysis/27-TCP 回包的磨叽姐 —— 延迟确认那些事.html" class="sidebar-link">27-TCP 回包的磨叽姐 —— 延迟确认那些事.md</a></li><li><a href="/book-docs/tcp-deep-analysis/28-兄弟你还活着吗 —— keepalive 原理.html" class="sidebar-link">28-兄弟你还活着吗 —— keepalive 原理.md</a></li><li><a href="/book-docs/tcp-deep-analysis/29-TCP RST 攻击与如何杀掉一条 TCP 连接.html" class="sidebar-link">29-TCP RST 攻击与如何杀掉一条 TCP 连接.md</a></li><li><a href="/book-docs/tcp-deep-analysis/3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.html" class="sidebar-link">3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.md</a></li><li><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html" class="sidebar-link">30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.md</a></li><li><a href="/book-docs/tcp-deep-analysis/31-定时器一览 —— 细数 TCP 的定时器们.html" class="sidebar-link">31-定时器一览 —— 细数 TCP 的定时器们.md</a></li><li><a href="/book-docs/tcp-deep-analysis/32-网络工具篇（一） —— telnet、nc、netstat.html" class="sidebar-link">32-网络工具篇（一） —— telnet、nc、netstat.md</a></li><li><a href="/book-docs/tcp-deep-analysis/33-网络工具篇（二） —— 网络包的照妖镜 tcpdump.html" class="sidebar-link">33-网络工具篇（二） —— 网络包的照妖镜 tcpdump.md</a></li><li><a href="/book-docs/tcp-deep-analysis/34-网络命令篇（三） —— 网络分析屠龙刀 wireshark.html" class="sidebar-link">34-网络命令篇（三） —— 网络分析屠龙刀 wireshark.md</a></li><li><a href="/book-docs/tcp-deep-analysis/35-案例分析 —— JDBC 批量插入真的就批量了吗.html" class="sidebar-link">35-案例分析 —— JDBC 批量插入真的就批量了吗.md</a></li><li><a href="/book-docs/tcp-deep-analysis/36-案例分析 —— TCP RST 包导致的网络血案.html" class="sidebar-link">36-案例分析 —— TCP RST 包导致的网络血案.md</a></li><li><a href="/book-docs/tcp-deep-analysis/37-案例分析 —— 一次 Zookeeper Connection Reset 问题排查.html" class="sidebar-link">37-案例分析 —— 一次 Zookeeper Connection Reset 问题排查.md</a></li><li><a href="/book-docs/tcp-deep-analysis/38-案例分析 —— 一次百万长连接压测 Nginx OOM 的问题排查分析.html" class="sidebar-link">38-案例分析 —— 一次百万长连接压测 Nginx OOM 的问题排查分析.md</a></li><li><a href="/book-docs/tcp-deep-analysis/39-作业题和思考题解析.html" class="sidebar-link">39-作业题和思考题解析.md</a></li><li><a href="/book-docs/tcp-deep-analysis/4-来自 Google 的协议栈测试神器 —— packetdrill.html" class="sidebar-link">4-来自 Google 的协议栈测试神器 —— packetdrill.md</a></li><li><a href="/book-docs/tcp-deep-analysis/40-网络学习一路困难，与君共勉.html" class="sidebar-link">40-网络学习一路困难，与君共勉.md</a></li><li><a href="/book-docs/tcp-deep-analysis/5-支撑 TCP 协议的基石 —— 剖析首部字段.html" class="sidebar-link">5-支撑 TCP 协议的基石 —— 剖析首部字段.md</a></li><li><a href="/book-docs/tcp-deep-analysis/6-数据包大小对网络的影响 —— MTU 与 MSS 的奥秘.html" class="sidebar-link">6-数据包大小对网络的影响 —— MTU 与 MSS 的奥秘.md</a></li><li><a href="/book-docs/tcp-deep-analysis/7-繁忙的贸易港口 —— 聊聊端口号.html" class="sidebar-link">7-繁忙的贸易港口 —— 聊聊端口号.md</a></li><li><a href="/book-docs/tcp-deep-analysis/8-临时端口号是如何分配的.html" class="sidebar-link">8-临时端口号是如何分配的.md</a></li><li><a href="/book-docs/tcp-deep-analysis/9-TCP 恋爱史第一步 —— 从三次握手说起.html" class="sidebar-link">9-TCP 恋爱史第一步 —— 从三次握手说起.md</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>TCP 的自连接是一个比较有意思的现象，甚至很多人认为是 Linux 内核的 bug。我们先来看看 TCP 的自连接是什么。</p> <h2 id="tcp-自连接是什么"><a href="#tcp-自连接是什么" class="header-anchor">#</a> TCP 自连接是什么</h2> <p>新建一个脚本 self_connect.sh，内容如下：</p> <div class="language- extra-class"><pre><code>while true
+do
+	nc 127.0.0.1 50000
+done
+</code></pre></div><p>执行这段脚本之前先用 netstat 等命令确认 50000 没有进程监听。然后执行脚本，经过一段时间，telnet 居然成功了。</p> <div class="language- extra-class"><pre><code>Trying 127.0.0.1...
+telnet: connect to address 127.0.0.1: Connection refused
+Trying 127.0.0.1...
+telnet: connect to address 127.0.0.1: Connection refused
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+</code></pre></div><p>使用 netstat 查看当前的 50000 端口的连接状况，如下所示。</p> <div class="language- extra-class"><pre><code>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:50000         127.0.0.1:50000         ESTABLISHED 24786/telnet
+</code></pre></div><p>可以看到源 IP、源端口是 <code>127.0.0.1:50000</code>，目标 ip、目标端口也是 <code>127.0.0.1:50000</code>，通过上面的脚本，我们连上了本来没有监听的端口号。</p> <h2 id="自连接原因分析"><a href="#自连接原因分析" class="header-anchor">#</a> 自连接原因分析</h2> <p>自连接成功的抓包结果如下图所示。</p> <p><img src="https://user-gold-cdn.xitu.io/2020/1/31/16ffa47400ab009c" alt=""></p> <p>对于自连接而言，上图中 wireshark 中的每个包的发送接收双方都是自己，所以可以理解为总共是六个包，包的交互过程如下图所示。</p> <p><img src="https://user-gold-cdn.xitu.io/2020/1/31/16ffa47403b85491" alt="自连接包交互过程"></p> <p>这个图是不是似曾相识？前四个包的交互过程就是 TCP 同时打开的过程。</p> <p>当一方主动发起连接时，操作系统会自动分配一个临时端口号给连接主动发起方。如果刚好分配的临时端口是 50000 端口，过程如下。</p> <ul><li>第一个包是发送 SYN 包给 50000 端口</li> <li>对于发送方而已，它收到了这个 SYN 包，以为对方是想同时打开，会回复 SYN+ACK</li> <li>回复 SYN+ACK 以后，它自己就会收到这个 SYN+ACK，以为是对方回的，对它而已握手成功，进入 ESTABLISHED 状态</li></ul> <h2 id="自连接的危害"><a href="#自连接的危害" class="header-anchor">#</a> 自连接的危害</h2> <p>设想一个如下的场景：</p> <ul><li>你写的业务系统 B 会访问本机服务 A，服务 A 监听了 50000 端口</li> <li>业务系统 B 的代码写的稍微比较健壮，增加了对服务 A 断开重连的逻辑</li> <li>如果有一天服务 A 挂掉比较长时间没有启动，业务系统 B 开始不断 connect 重连</li> <li>系统 B 经过一段时间的重试就会出现自连接的情况</li> <li>这时服务 A 想启动监听 50000 端口就会出现地址被占用的异常，无法正常启动</li></ul> <p>如果出现了自连接，至少有两个显而易见的问题：</p> <ul><li>自连接的进程占用了端口，导致真正需要监听端口的服务进程无法监听成功</li> <li>自连接的进程看起来 connect 成功，实际上服务是不正常的，无法正常进行数据通信</li></ul> <h2 id="如何解决自连接问题"><a href="#如何解决自连接问题" class="header-anchor">#</a> 如何解决自连接问题</h2> <p>自连接比较罕见，但一旦出现逻辑上就有问题了，因此要尽量避免。解决自连接有两个常见的办法。</p> <ul><li>让服务监听的端口与客户端随机分配的端口不可能相同即可</li> <li>出现自连接的时候，主动关掉连接</li></ul> <p>对于第一种方法，客户端随机分配的范围由 <code>/proc/sys/net/ipv4/ip_local_port_range</code> 文件决定，在我的 Centos 8 上，这个值的范围是 32768~60999，只要服务监听的端口小于 32768 就不会出现客户端与服务端口相同的情况。这种方式比较推荐。</p> <p>对于第二种方法，我第一次见是在 Golang 的 TCP connect 的代码，代码如下所示。</p> <div class="language- extra-class"><pre><code>func (sd *sysDialer) doDialTCP(ctx context.Context, laddr, raddr *TCPAddr) (*TCPConn, error) {
+	fd, err := internetSocket(ctx, sd.network, laddr, raddr, syscall.SOCK_STREAM, 0, &quot;dial&quot;, sd.Dialer.Control)
+
+	// TCP has a rarely used mechanism called a 'simultaneous connection' in
+	// which Dial(&quot;tcp&quot;, addr1, addr2) run on the machine at addr1 can
+	// connect to a simultaneous Dial(&quot;tcp&quot;, addr2, addr1) run on the machine
+	// at addr2, without either machine executing Listen. If laddr == nil,
+	// it means we want the kernel to pick an appropriate originating local
+	// address. Some Linux kernels cycle blindly through a fixed range of
+	// local ports, regardless of destination port. If a kernel happens to
+	// pick local port 50001 as the source for a Dial(&quot;tcp&quot;, &quot;&quot;, &quot;localhost:50001&quot;),
+	// then the Dial will succeed, having simultaneously connected to itself.
+	// This can only happen when we are letting the kernel pick a port (laddr == nil)
+	// and when there is no listener for the destination address.
+	// It's hard to argue this is anything other than a kernel bug. If we
+	// see this happen, rather than expose the buggy effect to users, we
+	// close the fd and try again. If it happens twice more, we relent and
+	// use the result. See also:
+	//	https://golang.org/issue/2690
+	//	https://stackoverflow.com/questions/4949858/
+	//
+	// The opposite can also happen: if we ask the kernel to pick an appropriate
+	// originating local address, sometimes it picks one that is already in use.
+	// So if the error is EADDRNOTAVAIL, we have to try again too, just for
+	// a different reason.
+	//
+	// The kernel socket code is no doubt enjoying watching us squirm.
+	for i := 0; i &lt; 2 &amp;&amp; (laddr == nil || laddr.Port == 0) &amp;&amp; (selfConnect(fd, err) || spuriousENOTAVAIL(err)); i++ {
+		if err == nil {
+			fd.Close()
+		}
+		fd, err = internetSocket(ctx, sd.network, laddr, raddr, syscall.SOCK_STREAM, 0, &quot;dial&quot;, sd.Dialer.Control)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+	return newTCPConn(fd), nil
+}
+
+func selfConnect(fd *netFD, err error) bool {
+	// If the connect failed, we clearly didn't connect to ourselves.
+	if err != nil {
+		return false
+	}
+
+	// The socket constructor can return an fd with raddr nil under certain
+	// unknown conditions. The errors in the calls there to Getpeername
+	// are discarded, but we can't catch the problem there because those
+	// calls are sometimes legally erroneous with a &quot;socket not connected&quot;.
+	// Since this code (selfConnect) is already trying to work around
+	// a problem, we make sure if this happens we recognize trouble and
+	// ask the DialTCP routine to try again.
+	// TODO: try to understand what's really going on.
+	if fd.laddr == nil || fd.raddr == nil {
+		return true
+	}
+	l := fd.laddr.(*TCPAddr)
+	r := fd.raddr.(*TCPAddr)
+	return l.Port == r.Port &amp;&amp; l.IP.Equal(r.IP)
+}
+</code></pre></div><p>这里详细解释了为什么有 selfConnect 方法的判断，判断是否是自连接的逻辑是判断源 IP 和目标 IP 是否相等，源端口号和目标端口号是否相等。</p> <h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>到这里，TCP 自连接的知识就介绍完了，在以后写 web 服务监听端口时，记得看下机器上的端口范围，不要胡来。</p> <p><a href="https://juejin.im/book/6844733788681928712/section/6844733788824535048" target="_blank" rel="noopener noreferrer">Source<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book-docs/tcp-deep-analysis/1-开篇词 —— 小册食用指南.html" class="prev">
+        1-开篇词 —— 小册食用指南.md
+      </a></span> <span class="next"><a href="/book-docs/tcp-deep-analysis/11-相见时难别亦难 —— 谈谈四次挥手.html">
+        11-相见时难别亦难 —— 谈谈四次挥手.md
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book-docs/tcp-deep-analysis/assets/js/app.c5d1f0fa.js" defer></script><script src="/book-docs/tcp-deep-analysis/assets/js/2.8125d067.js" defer></script><script src="/book-docs/tcp-deep-analysis/assets/js/8.8683fe45.js" defer></script>
+  </body>
+</html>

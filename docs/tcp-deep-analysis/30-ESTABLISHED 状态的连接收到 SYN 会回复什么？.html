@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>技术文档</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="技术文档">
+    
+    <link rel="preload" href="/book-docs/tcp-deep-analysis/assets/css/0.styles.1ae38039.css" as="style"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/app.c5d1f0fa.js" as="script"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/2.8125d067.js" as="script"><link rel="preload" href="/book-docs/tcp-deep-analysis/assets/js/30.7b2345d3.js" as="script"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/10.456c114f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/11.4f919a5c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/12.8691dd56.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/13.6eb06c9f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/14.8ea58ce4.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/15.99b76ce3.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/16.892ccdbb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/17.46486d87.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/18.1ae83189.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/19.6788fb0a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/20.38eb4e81.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/21.dd2d7e3c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/22.1fd8c44a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/23.7a6fd38e.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/24.4006c26f.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/25.acd18f3e.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/26.d393a91d.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/27.5eb2dc92.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/28.2f7d9a61.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/29.1b6a2c80.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/3.086afb7c.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/31.eec26697.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/32.05263bfb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/33.0a453fe1.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/34.6fcf5c05.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/35.2076a0c2.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/36.db825ac9.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/37.3ce92f36.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/38.419ced31.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/39.e7e9657a.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/4.1e02d683.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/40.11cc02bb.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/41.e5c285f2.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/42.d1465cb7.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/43.bba7aad7.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/44.c74f481b.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/45.4c2a7d70.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/46.917e2cae.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/47.5ae9bff9.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/5.ed3e8199.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/6.19b45fc3.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/7.2a1330f4.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/8.8683fe45.js"><link rel="prefetch" href="/book-docs/tcp-deep-analysis/assets/js/9.b4387ffc.js">
+    <link rel="stylesheet" href="/book-docs/tcp-deep-analysis/assets/css/0.styles.1ae38039.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book-docs/tcp-deep-analysis/" class="home-link router-link-active"><!----> <span class="site-name">技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/book-docs/tcp-deep-analysis/1-开篇词 —— 小册食用指南.html" class="sidebar-link">1-开篇词 —— 小册食用指南.md</a></li><li><a href="/book-docs/tcp-deep-analysis/10-聊聊 TCP 自连接那些事.html" class="sidebar-link">10-聊聊 TCP 自连接那些事.md</a></li><li><a href="/book-docs/tcp-deep-analysis/11-相见时难别亦难 —— 谈谈四次挥手.html" class="sidebar-link">11-相见时难别亦难 —— 谈谈四次挥手.md</a></li><li><a href="/book-docs/tcp-deep-analysis/12-时光机 —— TCP 头部时间戳选项.html" class="sidebar-link">12-时光机 —— TCP 头部时间戳选项.md</a></li><li><a href="/book-docs/tcp-deep-analysis/13-状态机魔鬼 —— TCP 11 种状态变迁及模拟重现.html" class="sidebar-link">13-状态机魔鬼 —— TCP 11 种状态变迁及模拟重现.md</a></li><li><a href="/book-docs/tcp-deep-analysis/14-另辟蹊径看三次握手 —— 全连接队列和半连接队列与 backlog.html" class="sidebar-link">14-另辟蹊径看三次握手 —— 全连接队列和半连接队列与 backlog.md</a></li><li><a href="/book-docs/tcp-deep-analysis/15-原始但德高望重的 DDoS 攻击方式 —— SYN Flood 攻击原理.html" class="sidebar-link">15-原始但德高望重的 DDoS 攻击方式 —— SYN Flood 攻击原理.md</a></li><li><a href="/book-docs/tcp-deep-analysis/16-嫌三次握手太慢 —— 来快速打开吧.html" class="sidebar-link">16-嫌三次握手太慢 —— 来快速打开吧.md</a></li><li><a href="/book-docs/tcp-deep-analysis/17-Address already in use —— 聊聊 Socket 选项之 SO_REUSEADDR.html" class="sidebar-link">17-Address already in use —— 聊聊 Socket 选项之 SO_REUSEADDR.md</a></li><li><a href="/book-docs/tcp-deep-analysis/18-一台主机上两个进程可以同时监听同一个端口吗.html" class="sidebar-link">18-一台主机上两个进程可以同时监听同一个端口吗.md</a></li><li><a href="/book-docs/tcp-deep-analysis/19-优雅关闭连接 —— Socket 选项之 SO_LINGER.html" class="sidebar-link">19-优雅关闭连接 —— Socket 选项之 SO_LINGER.md</a></li><li><a href="/book-docs/tcp-deep-analysis/2-TCP_IP 历史与分层模型.html" class="sidebar-link">2-TCP_IP 历史与分层模型.md</a></li><li><a href="/book-docs/tcp-deep-analysis/20-一个神奇的状态 —— TIME_WAIT.html" class="sidebar-link">20-一个神奇的状态 —— TIME_WAIT.md</a></li><li><a href="/book-docs/tcp-deep-analysis/21-爱搞事情的 RST 包 —— 产生场景、Connection reset 与 Broken pipe.html" class="sidebar-link">21-爱搞事情的 RST 包 —— 产生场景、Connection reset 与 Broken pipe.md</a></li><li><a href="/book-docs/tcp-deep-analysis/22-重传机制 —— 超时重传、快速重传与 SACK.html" class="sidebar-link">22-重传机制 —— 超时重传、快速重传与 SACK.md</a></li><li><a href="/book-docs/tcp-deep-analysis/23-重传间隔有讲究 —— 多久重传才合适.html" class="sidebar-link">23-重传间隔有讲究 —— 多久重传才合适.md</a></li><li><a href="/book-docs/tcp-deep-analysis/24-TCP流量控制 —— 滑动窗口.html" class="sidebar-link">24-TCP流量控制 —— 滑动窗口.md</a></li><li><a href="/book-docs/tcp-deep-analysis/25-有风度的 TCP —— 拥塞控制.html" class="sidebar-link">25-有风度的 TCP —— 拥塞控制.md</a></li><li><a href="/book-docs/tcp-deep-analysis/26-TCP 发包的 hold 住哥 —— Nagle 算法那些事.html" class="sidebar-link">26-TCP 发包的 hold 住哥 —— Nagle 算法那些事.md</a></li><li><a href="/book-docs/tcp-deep-analysis/27-TCP 回包的磨叽姐 —— 延迟确认那些事.html" class="sidebar-link">27-TCP 回包的磨叽姐 —— 延迟确认那些事.md</a></li><li><a href="/book-docs/tcp-deep-analysis/28-兄弟你还活着吗 —— keepalive 原理.html" class="sidebar-link">28-兄弟你还活着吗 —— keepalive 原理.md</a></li><li><a href="/book-docs/tcp-deep-analysis/29-TCP RST 攻击与如何杀掉一条 TCP 连接.html" class="sidebar-link">29-TCP RST 攻击与如何杀掉一条 TCP 连接.md</a></li><li><a href="/book-docs/tcp-deep-analysis/3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.html" class="sidebar-link">3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.md</a></li><li><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html" class="active sidebar-link">30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.md</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html#scapy-实验复现现象" class="sidebar-link">scapy 实验复现现象</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html#原因分析" class="sidebar-link">原因分析</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html#内核源码分析" class="sidebar-link">内核源码分析</a></li><li class="sidebar-sub-header"><a href="/book-docs/tcp-deep-analysis/30-ESTABLISHED 状态的连接收到 SYN 会回复什么？.html#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/book-docs/tcp-deep-analysis/31-定时器一览 —— 细数 TCP 的定时器们.html" class="sidebar-link">31-定时器一览 —— 细数 TCP 的定时器们.md</a></li><li><a href="/book-docs/tcp-deep-analysis/32-网络工具篇（一） —— telnet、nc、netstat.html" class="sidebar-link">32-网络工具篇（一） —— telnet、nc、netstat.md</a></li><li><a href="/book-docs/tcp-deep-analysis/33-网络工具篇（二） —— 网络包的照妖镜 tcpdump.html" class="sidebar-link">33-网络工具篇（二） —— 网络包的照妖镜 tcpdump.md</a></li><li><a href="/book-docs/tcp-deep-analysis/34-网络命令篇（三） —— 网络分析屠龙刀 wireshark.html" class="sidebar-link">34-网络命令篇（三） —— 网络分析屠龙刀 wireshark.md</a></li><li><a href="/book-docs/tcp-deep-analysis/35-案例分析 —— JDBC 批量插入真的就批量了吗.html" class="sidebar-link">35-案例分析 —— JDBC 批量插入真的就批量了吗.md</a></li><li><a href="/book-docs/tcp-deep-analysis/36-案例分析 —— TCP RST 包导致的网络血案.html" class="sidebar-link">36-案例分析 —— TCP RST 包导致的网络血案.md</a></li><li><a href="/book-docs/tcp-deep-analysis/37-案例分析 —— 一次 Zookeeper Connection Reset 问题排查.html" class="sidebar-link">37-案例分析 —— 一次 Zookeeper Connection Reset 问题排查.md</a></li><li><a href="/book-docs/tcp-deep-analysis/38-案例分析 —— 一次百万长连接压测 Nginx OOM 的问题排查分析.html" class="sidebar-link">38-案例分析 —— 一次百万长连接压测 Nginx OOM 的问题排查分析.md</a></li><li><a href="/book-docs/tcp-deep-analysis/39-作业题和思考题解析.html" class="sidebar-link">39-作业题和思考题解析.md</a></li><li><a href="/book-docs/tcp-deep-analysis/4-来自 Google 的协议栈测试神器 —— packetdrill.html" class="sidebar-link">4-来自 Google 的协议栈测试神器 —— packetdrill.md</a></li><li><a href="/book-docs/tcp-deep-analysis/40-网络学习一路困难，与君共勉.html" class="sidebar-link">40-网络学习一路困难，与君共勉.md</a></li><li><a href="/book-docs/tcp-deep-analysis/5-支撑 TCP 协议的基石 —— 剖析首部字段.html" class="sidebar-link">5-支撑 TCP 协议的基石 —— 剖析首部字段.md</a></li><li><a href="/book-docs/tcp-deep-analysis/6-数据包大小对网络的影响 —— MTU 与 MSS 的奥秘.html" class="sidebar-link">6-数据包大小对网络的影响 —— MTU 与 MSS 的奥秘.md</a></li><li><a href="/book-docs/tcp-deep-analysis/7-繁忙的贸易港口 —— 聊聊端口号.html" class="sidebar-link">7-繁忙的贸易港口 —— 聊聊端口号.md</a></li><li><a href="/book-docs/tcp-deep-analysis/8-临时端口号是如何分配的.html" class="sidebar-link">8-临时端口号是如何分配的.md</a></li><li><a href="/book-docs/tcp-deep-analysis/9-TCP 恋爱史第一步 —— 从三次握手说起.html" class="sidebar-link">9-TCP 恋爱史第一步 —— 从三次握手说起.md</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>最初这个问题是读者上一个小册中的一个留言提出的：「处于 ESTABLISHED 的连接，为什么还要响应 SYN 包？」，这篇文章就来聊聊这一部分的内容。</p> <p>通过阅读这篇文章，你会了解到这些知识</p> <ul><li>ESTABLISHED 状态的连接收到乱序包会回复什么</li> <li>Challenge ACK 的概念</li> <li>ACK 报文限速是什么鬼</li> <li>SystemTap 工具在 linux 内核追踪中的使用</li> <li>包注入神器 scapy 的使用</li> <li>RST 攻击的原理</li> <li>killcx 等工具利用 RST 攻击的方式来杀掉连接的原理</li></ul> <p>接下来开始文章的内容。</p> <h2 id="scapy-实验复现现象"><a href="#scapy-实验复现现象" class="header-anchor">#</a> scapy 实验复现现象</h2> <p>实验步骤如下：</p> <p>在机器 A(10.211.55.10) 使用 nc 启动一个服务程序，监听 9090 端口，如下所示。</p> <div class="language- extra-class"><pre><code>nc -4 -l 9090
+</code></pre></div><p>机器 A 上同步使用 tcpdump 抓包，其中 -S 表示显示绝对序列号。</p> <div class="language- extra-class"><pre><code>sudo tcpdump -i any port 9090 -nn  -S
+</code></pre></div><p>在机器 B 使用 nc 命令连接机器 A 的 nc 服务器，输入 &quot;hello&quot; 。</p> <div class="language- extra-class"><pre><code>nc 10.211.55.10 9090
+</code></pre></div><p>使用 netstat 可以看到此次连接的信息。</p> <div class="language- extra-class"><pre><code>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 10.211.55.10:9090       10.211.55.20:50718      ESTABLISHED 9029/nc
+</code></pre></div><p>在机器 B 上使用 scapy，模拟发送 SYN 包，scapy 脚本如下所示。</p> <div class="language- extra-class"><pre><code>send(IP(dst=&quot;10.211.55.10&quot;)/TCP(sport=50718, dport=9090, seq=10, flags='S'))
+</code></pre></div><p>源端口号 sport 使用此次连接的临时端口号 50718，序列号随便写一个，这里 seq 为 10。</p> <p>执行 scapy 执行上面的代码，tcpdump 中显示的包结果如下。</p> <div class="language- extra-class"><pre><code>// nc 终端中 hello 请求包
+18:41:51.956735 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [P.], seq 3219267420:3219267426, ack 2848436085, win 229, options [nop,nop,TS val 1094540820 ecr 12823113], length 6
+18:41:51.956787 IP 10.211.55.10.9090 &gt; 10.211.55.20.50718: Flags [.], ack 3219267426, win 227, options [nop,nop,TS val 12827910 ecr 1094540820], length 0
+
+// scapy 的 SYN 包
+18:44:32.373331 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+18:44:32.373366 IP 10.211.55.10.9090 &gt; 10.211.55.20.50718: Flags [.], ack 3219267426, win 227, options [nop,nop,TS val 12988327 ecr 1094540820], length 0
+</code></pre></div><p>可以看到，对于一个 SEQ 为随意的 SYN 包，TCP 回复了正确的 ACK 包，其确认号为 3219267426。</p> <p>从 rfc793 文档中也可以看到：</p> <blockquote><p>Linux 内核对于收到的乱序 SYN 报文，会回复一个携带了正确序列号和确认号的 ACK 报文。</p></blockquote> <p>这个 ACK 被称之为 Challenge ACK。</p> <p>我们后面要介绍的杀掉连接工具 killcx 的原理，正是是基于这一点。</p> <h2 id="原因分析"><a href="#原因分析" class="header-anchor">#</a> 原因分析</h2> <p>为了方便说明，我们记发送 SYN 报文的一端为 A，处于 ESTABLISHED 状态接收 SYN 报文的一端为 B，B 对收到的 SYN 包回复 ACK 的原因是想让对端 A 确认之前的连接是否已经失效，以便做出一些处理。</p> <p>对于 A 而已，如果之前的连接还在，对于收到的 ACK 包，正常处理即可，不再讨论。</p> <p>如果 A 之前的此条连接已经不在了，此次 SYN 包是想发起新的连接，对于收到的 ACK 包，会立即回复一个 RST，且 RST 包的序列号就等于 ACK 包的序列号，B 收到这个合法的 RST 包以后，就会将连接释放。A 此时若想继续与 B 创建连接，则可以选择再次发送 SYN 包，重新建连，如下图所示。</p> <p><img src="https://user-gold-cdn.xitu.io/2020/2/2/170047c916cc0d37" alt="estab_syn"></p> <p>接下来我们来看内核源码的处理，</p> <h2 id="内核源码分析"><a href="#内核源码分析" class="header-anchor">#</a> 内核源码分析</h2> <p>在这之前，我们需要先了解 SystemTap 工具的使用。SystemTap 是 Linux 中非常强大的调试探针工具，类似于 java 中的 javaagent instrument，可以获取一个内核函数运行时的入参变量、返回值、调用堆栈，甚至可以直接修改变量的值。这个工具详细的使用这里不展开，感兴趣的同学可以自行 Google。</p> <p>接下来我们来使用 SystemTap 这个工具来给内核插入 probe 探针，以 3.10.0 内核为例，内核中回复的 ack 的函数在 net/ipv4/tcp_output.c 的 tcp_send_ack 中实现。我们给这个函数插入调用探针，在端口号为 9090 时打印调用堆栈。新建一个 ack_test.stp 文件，部分代码如下所示。</p> <div class="language- extra-class"><pre><code>%{
+</code></pre></div><p>​<br>
+​<br>
+​<br>
+%}</p> <div class="language- extra-class"><pre><code>function tcp_src_port:long(sk:long)
+{
+	return __tcp_sock_sport(sk)
+}
+function tcp_dst_port:long(sk:long)
+{
+	return __tcp_sock_dport(sk)
+}
+function tcp_src_addr:long(sk:long)
+{
+	return ntohl(__ip_sock_saddr(sk))
+}
+function tcp_dst_addr:long(sk:long)
+{
+	return ntohl(__ip_sock_daddr(sk))
+}
+function str_addr:string(addr, port) {
+        return sprintf(&quot;%d.%d.%d.%d:%d&quot;,
+                       (addr &amp; 0xff000000) &gt;&gt; 24,
+                       (addr &amp; 0x00ff0000) &gt;&gt; 16,
+                       (addr &amp; 0x0000ff00) &gt;&gt; 8,
+                       (addr &amp; 0x000000ff),
+                       port
+                )
+}
+
+probe kernel.function(&quot;tcp_send_ack@net/ipv4/tcp_output.c&quot;)
+{
+       src_addr = tcp_src_addr($sk);
+       src_port = tcp_src_port($sk);
+       dst_addr = tcp_dst_addr($sk);
+       dst_port = tcp_dst_port($sk);
+       if (dst_port == 9090 || src_port == 9090)
+       {
+              printf(&quot;send ack : %s:-&gt;%s\n&quot;,
+                     str_addr(src_addr, src_port),
+                     str_addr(dst_addr, dst_port));
+              print_backtrace();
+       }
+}
+</code></pre></div><p>使用 stap 命令执行上面的脚本</p> <div class="language- extra-class"><pre><code>sudo stap -g ack_test.stp
+</code></pre></div><p>​</p> <p>再次使用 scapy 发送一个 syn 包，内核同样会回复 ACK，此时 stap 输出结果如下。</p> <div class="language- extra-class"><pre><code>send ack : 10.211.55.10:9090:-&gt;10.211.55.20:50718
+ 0xffffffff815d0940 : tcp_send_ack+0x0/0x170 [kernel]
+ 0xffffffff815cb1d2 : tcp_validate_incoming+0x212/0x2d0 [kernel]
+ 0xffffffff815cb44d : tcp_rcv_established+0x1bd/0x760 [kernel]
+ 0xffffffff815d5f8a : tcp_v4_do_rcv+0x10a/0x340 [kernel]
+ 0xffffffff815d76d9 : tcp_v4_rcv+0x799/0x9a0 [kernel]
+ 0xffffffff815b1094 : ip_local_deliver_finish+0xb4/0x1f0 [kernel]
+ 0xffffffff815b1379 : ip_local_deliver+0x59/0xd0 [kernel]
+ 0xffffffff815b0d1a : ip_rcv_finish+0x8a/0x350 [kernel]
+ 0xffffffff815b16a6 : ip_rcv+0x2b6/0x410 [kernel]
+</code></pre></div><p>可以看到这个 ACK 经过了下面这些函数调用。</p> <div class="language- extra-class"><pre><code>tcp_v4_rcv
+  -&gt; tcp_v4_do_rcv
+    -&gt; tcp_rcv_established
+      -&gt; tcp_validate_incoming
+        -&gt; tcp_send_ack
+</code></pre></div><p>tcp_validate_incoming 函数精简后的部分代码如下所示。</p> <div class="language- extra-class"><pre><code>static bool tcp_validate_incoming(struct sock *sk, struct sk_buff *skb,
+				  const struct tcphdr *th)
+{	
+	// seq 不在窗口内
+	/* Step 1: check sequence number */
+	if (!tcp_sequence(tp, TCP_SKB_CB(skb)-&gt;seq, TCP_SKB_CB(skb)-&gt;end_seq)) {
+		// RST 标记没有设置
+		if (!th-&gt;rst) {
+			if (th-&gt;syn)
+				goto syn_challenge;
+		}
+		goto discard;
+	}
+	
+	/* step 4: Check for a SYN。 RFC 5961 4.2 : Send a challenge ack */
+	if (th-&gt;syn) {
+syn_challenge: // 处理 SYN Challenge 的情况
+		tcp_send_challenge_ack(sk, skb); // 
+		goto discard;
+	}
+</code></pre></div><p>tcp_send_challenge_ack 函数真正调用了 tcp_send_ack 函数。 这里的注释提到了 <a href="https://tools.ietf.org/html/rfc5961#section-4.2" target="_blank" rel="noopener noreferrer">RFC 5961 4.2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，说的正是 Challenge ACK 相关的内容。</p> <p>如果攻击者疯狂发送假的乱序包，接收端也跟着回复 Challenge ACK，会耗费大量的 CPU 和带宽资源。于是 RFC 5961 提出了 ACK Throttling 方案，限制了每秒钟发送 Challenge ACK 报文的数量，这个值由 net.ipv4.tcp_challenge_ack_limit 系统变量决定，默认值是 1000，也就是 1s 内最多允许 1000 个 Challenge ACK 报文。</p> <p>接下来使用 sysctl 将这个值改小为 1，如下所示。</p> <div class="language- extra-class"><pre><code>sudo sysctl -w net.ipv4.tcp_challenge_ack_limit=&quot;1&quot;
+</code></pre></div><p>这样理论上在一秒内多次发送一个 Challenge ACK 包，接下来使用 scapy 在短时间内发送 5 次 SYN 包，看看内核是否只会回复一个 ACK 包，scapy 的脚本如下所示。</p> <div class="language- extra-class"><pre><code>send(IP(dst=&quot;10.211.55.10&quot;)/TCP(sport=50718,dport=9090,seq=10,flags='S'), loop=0, count=5)
+</code></pre></div><p>tcpdump 抓包结果如下。</p> <div class="language- extra-class"><pre><code>03:40:30.970682 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+03:40:30.970771 IP 10.211.55.10.9090 &gt; 10.211.55.20.50718: Flags [.], ack 3219267426, win 227, options [nop,nop,TS val 45146923 ecr 1094540820], length 0
+03:40:30.974889 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+03:40:30.975004 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+03:40:30.978643 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+03:40:30.981987 IP 10.211.55.20.50718 &gt; 10.211.55.10.9090: Flags [S], seq 10, win 8192, length 0
+</code></pre></div><p>可以看到确实是只对第一个 SYN 包回复了一个 ACK 包，其它的四个 SYN 都没有回复 ACK。</p> <h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>这篇文章介绍了为什么 ESTABLISHED 状态连接的需要对 SYN 包做出响应，Challenge ACK 是什么，使用 scapy 复现了现象，演示了 SystemTap 内核探针调试工具的使用，最后通过修改系统变量复现了 ACK 限速。</p> <p>![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xOSAyM2wtNy02LjUgNy02LjUiLz4KPC9zdmc+Cg==)</p> <p>![](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xMyAyMmw3LTYuNUwxMyA5Ii8+Cjwvc3ZnPgo=)</p> <p><a href="https://juejin.im/book/6844733788681928712/section/6844733788845522957" target="_blank" rel="noopener noreferrer">Source<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book-docs/tcp-deep-analysis/3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.html" class="prev">
+        3-TCP 概述 —— 可靠的、面向连接的、基于字节流、全双工的协议.md
+      </a></span> <span class="next"><a href="/book-docs/tcp-deep-analysis/31-定时器一览 —— 细数 TCP 的定时器们.html">
+        31-定时器一览 —— 细数 TCP 的定时器们.md
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book-docs/tcp-deep-analysis/assets/js/app.c5d1f0fa.js" defer></script><script src="/book-docs/tcp-deep-analysis/assets/js/2.8125d067.js" defer></script><script src="/book-docs/tcp-deep-analysis/assets/js/30.7b2345d3.js" defer></script>
+  </body>
+</html>
