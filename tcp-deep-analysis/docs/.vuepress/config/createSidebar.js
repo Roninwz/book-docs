@@ -6,7 +6,15 @@ const docs_path = path.resolve(__dirname, '../../../docs')
 
 function gen_sidebar_config(dir_path, ref, parent_ref, parent_router_path) {
   try {
-    const file_or_dir_list = fs.readdirSync(dir_path)
+    let file_or_dir_list = fs.readdirSync(dir_path).sort()
+    file_or_dir_list = file_or_dir_list.sort((a, b) => {
+      if (a.length >= 3 && b.length >= 3) {
+        return a.substring(0, 3).replace(/[^0-9]/ig, '') - b.substring(0, 3).replace(/[^0-9]/ig, '')
+      } else {
+        return a.substring(0, 1).replace(/[^0-9]/ig, '') - b.substring(0, 1).replace(/[^0-9]/ig, '')
+      }
+    })
+    console.log('my console file_or_dir_list : ', file_or_dir_list);
     if (file_or_dir_list) {
       for (let index = 0; index < file_or_dir_list.length; index++) {
         const file_or_dir_name = file_or_dir_list[index];
