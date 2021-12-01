@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import dedent from "dedent";
 import { codemirror } from "vue-codemirror";
 // base style
 import "codemirror/lib/codemirror.css";
