@@ -20,6 +20,8 @@ react 技术揭秘 just-react-analysis
 
 web-interview
 
+剑指前端 Offer（无源码）：awesome-interview
+
 ## 博客系列
 
 ## 知识图谱及原理 guidebook 系列
@@ -45,7 +47,3 @@ React 知识图谱及原理解析： react-guidebook
 前端图像学 知识图谱及原理解析： visualization-guidebook
 
 DevOps 知识图谱及原理解析： devops-guidebook
-
-## 无源代码系列
-
-剑指前端 Offer：awesome-interview

@@ -1,12 +1,12 @@
 # 剑指前端 Offer
 
-[阅读地址 1](https://febook.hzfe.org/awesome-interview/) [阅读地址 2](https://hzfe.github.io/awesome-interview/)
+[阅读地址 1](https://febook.hzfe.org/book-docs/awesome-interview/) [阅读地址 2](https://hzfe.github.io/book-docs/awesome-interview/)
 
 ## 互动与勘误
 
 本书目前在 [GitHub](https://github.com/hzfe/awesome-interview) 中开源了第一版内容的部分题目，旨在接受广大开发者的检验和收集读者反馈后，能将本书打磨得更好。
 
-阅读时您可能会发现内容上的错误，可以直接在相关章节末尾的评论区进行留言，留言内容会被自动同步到仓库 Issues 中。您也可以在仓库 [Issues](https://github.com/HZFE/awesome-interview/issues) 中直接留下宝贵意见。欢迎读者对内容仓库进行 [订阅/Watch](https://github.com/hzfe/awesome-interview) 或加入群聊，我们会持续添加和订正内容。
+阅读时您可能会发现内容上的错误，可以直接在相关章节末尾的评论区进行留言，留言内容会被自动同步到仓库 Issues 中。您也可以在仓库 [Issues](https://github.com/HZFE/book-docs/awesome-interview/issues) 中直接留下宝贵意见。欢迎读者对内容仓库进行 [订阅/Watch](https://github.com/hzfe/awesome-interview) 或加入群聊，我们会持续添加和订正内容。
 
 <img src="https://user-images.githubusercontent.com/17002181/135381385-f0dc86cd-be39-4826-87dd-30ddeaaa0229.jpg" height="200" />
 
